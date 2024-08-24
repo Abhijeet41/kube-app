@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: abhi41/vprofiledb  #from docker hub accound
+          image: abhi41/vprofiledb:latest  #from docker hub accound
           #service runs on port no 3306
           volumeMounts:
             - mountPath: /var/lib/mysql
