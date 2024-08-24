@@ -26,11 +26,11 @@ spec:
             containerPort: 3306
           #for env we access that from our secret
           env:
-            -name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: app-secret   #get this from app-secret.yaml file
-                key: db-pass
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret   #get this from app-secret.yaml file
+                  key: db-pass
       nodeSelector:
         zone: us-east-1a
       volumes:
