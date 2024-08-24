@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: vprodb  #we will create service definition file were it will find pod with label
-  replica: 1
+  replicas: 1
   template:
     metadata:
       labels:
