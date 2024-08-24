@@ -32,12 +32,13 @@ spec:
                   name: app-secret   #get this from app-secret.yaml file
                   key: db-pass
       nodeSelector:
-        zone: us-east-1a
+        zone: us-east-1c
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
             volumeID: vol-0a4ed093fe936208d
             fsType: ext4
+
       initContainers:
         - name: busybox
           image: busybox:latest
