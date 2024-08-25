@@ -18,7 +18,7 @@ spec:
         - name: vprodb
           image: vprofile/vprofiledb:V1  #from docker hub accound
           args:
-            - "--ignore-db-dir=lost+lost"
+          #  - "--ignore-db-dir=lost+lost"
           #service runs on port no 3306
           volumeMounts:
             - mountPath: /var/lib/mysql
