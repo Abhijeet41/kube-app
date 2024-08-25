@@ -32,7 +32,7 @@ spec:
                   name: app-secret   #get this from app-secret.yaml file
                   key: db-pass
       nodeSelector:
-        zone: us-east-1c
+        zone: us-east-1a
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
