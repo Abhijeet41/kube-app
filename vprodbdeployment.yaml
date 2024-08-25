@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: abhi41/vprofiledb:latest  #from docker hub accound
+          image: vprofile/vprofiledb:V1  #from docker hub accound
           args:
             - "--ignore-db-dir=lost+lost"
           #service runs on port no 3306
