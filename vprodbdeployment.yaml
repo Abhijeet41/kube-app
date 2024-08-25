@@ -17,6 +17,8 @@ spec:
       containers:
         - name: vprodb
           image: abhi41/vprofiledb:latest  #from docker hub accound
+          args:
+            - --ignore-db-dir=lost+lost
           #service runs on port no 3306
           volumeMounts:
             - mountPath: /var/lib/mysql
@@ -39,11 +41,5 @@ spec:
             volumeID: vol-0ab802d284b9f4af1
             fsType: ext4
 
-      initContainers:
-        - name: busybox
-          image: busybox:latest
-          args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
-          volumeMounts:
-            - name: vpro-db-data
-              mountPath: /var/lib/mysql
+
 
