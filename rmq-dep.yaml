@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: vpromq01
-    spec: 
+    spec:
       containers:
         - name: vpromq01
           image: rabbitmq #this not customized image its an official image from docker hub
@@ -21,11 +21,10 @@ spec:
             - name: vpromq01-port
               containerPort: 15672
           env:
-            - name: RABBITMQ_DEFALUT_PASS
+            - name: RABBITMQ_DEFAULT_PASS
               valueFrom:
                 secretKeyRef:
                   name: app-secret
                   key: rmq-pass
-
             - name: RABBITMQ_DEFAULT_USER
               value: "guest"
